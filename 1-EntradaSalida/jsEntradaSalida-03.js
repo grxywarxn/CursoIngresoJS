@@ -8,7 +8,7 @@ function mostrar()
 	let mensaje;
 
 	nombreIngresado = document.getElementById("txtIdNombre").value;
-	mensaje = "Su nombre es " + nombreIngresado
+	mensaje = "Su nombre es " + nombreIngresado;
 
 	alert(mensaje);
 

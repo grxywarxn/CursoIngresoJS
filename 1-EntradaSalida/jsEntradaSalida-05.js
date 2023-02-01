@@ -7,11 +7,12 @@ function mostrar()
 	let nombreIngresado;
 	let edadIngresada;
 	let mensaje;
+	
 	nombreIngresado = document.getElementById("txtIdNombre").value;
 	edadIngresada = document.getElementById("txtIdEdad").value;
 
-	mensaje = "Su nombre es " + nombreIngresado + " y su edad es " + edadIngresada
-	
+	mensaje = "Su nombre es " + nombreIngresado + " y su edad es " + edadIngresada;
+
 	alert(mensaje);
 }
 
