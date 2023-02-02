@@ -7,13 +7,17 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
 	let sueldoIngresado;
-	let sueldoReducido;
-	
+	let porcentajeAplicado;
+	let porcentaje;
+	let resultado;
+
+	porcentaje = -25;
 	sueldoIngresado = document.getElementById("txtIdImporte").value;
 
 	sueldoIngresado =parseInt(sueldoIngresado);
 
-	sueldoReducido = sueldoIngresado * 0.75;
+	porcentajeAplicado = sueldoIngresado * porcentaje/100;
+	resultado = sueldoIngresado + porcentajeAplicado;
 
-	document.getElementById("txtIdResultado").value = sueldoReducido;
+	document.getElementById("txtIdResultado").value = resultado;
 }
