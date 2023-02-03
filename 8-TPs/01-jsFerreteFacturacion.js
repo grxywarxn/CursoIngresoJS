@@ -63,6 +63,4 @@ function PrecioFinal()
     
     precioFinal = sumaDePrecios + sumaDePrecios * IVA/100;
     console.log("El precio final de los productos con el IVA del 21% es: " + precioFinal)
-
-	
 }
