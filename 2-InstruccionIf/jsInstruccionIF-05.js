@@ -1,6 +1,22 @@
+//Luis Claros
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	let edad;
+	let mensaje;
 
-}//FIN DE LA FUNCIÓN
+	edad = parseInt(document.getElementById("txtIdEdad").value);
+
+	if(edad < 13 || edad > 17){
+
+		mensaje = "Usted no es adolescente";
+	
+	}
+
+	alert(mensaje);
+
+}
+
+
+
+//FIN DE LA FUNCIÓN
