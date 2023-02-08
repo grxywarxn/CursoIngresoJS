@@ -13,14 +13,14 @@ function mostrar()
 
 	}else
 	{
-		if(edad < 18)
-		{
-			mensaje = "Usted es adolescente";
+	if(edad < 18)
+	{	
+		mensaje = "Usted es adolescente";
 
-		}else{
+	}else{
 
-			mensaje = "Usted es mayor de edad";
-		}		
+		mensaje = "Usted es mayor de edad";
+	}		
 	}
 
 	alert(mensaje);
