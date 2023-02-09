@@ -8,43 +8,66 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
-{
- 	let cantidadLamparas;
-    let marcaLamparas;
-    let precioConDescuento;
-    let ingresosBrutos;
-    let precioUnitario;
-    let descuento;
 
+// DECLARAR VARIABLES
+function CalcularPrecio() {
+    let cantidadLamparas;
+    let marcaLamparas;
+    let descuento;
+    let precioUnitario;
+    let precioFinal;
+    let impuesto;
+    let precioConDescuento;
+    let precioConImpuesto;
+    let impuestoPagado;
+    let mensaje;
+//OBTENER DATOS DEL USUARIO
     cantidadLamparas = parseInt(document.getElementById("txtIdCantidad").value);
     marcaLamparas = document.getElementById("Marca").value;
-    ingresosBrutos = 1.1
+//DAR VALOR A VARIABLES FIJAS
+    impuesto = 10
     precioUnitario = 35
-
-    if(cantidadLamparas > 5){
-        descuento = 50;
-    }else if(cantidadLamparas == 5){
+//LOGICA DEL PROGRAMA
+    if (cantidadLamparas > 5) {
         if(marcaLamparas == "ArgentinaLuz"){
+        descuento = 50;
+    } else if (cantidadLamparas == 5) {
+        if (marcaLamparas == "ArgentinaLuz") {
             descuento = 40;
-        }else{
+        } else {
             descuento = 30;
         }
-    }else if (cantidadLamparas == 4){
-        if(marcaLamparas == "ArgentinaLuz" || "FelipeLamparas"){
+    } else if (cantidadLamparas == 4) {
+        if (marcaLamparas == "ArgentinaLuz" || "FelipeLamparas") {
             descuento = 25;
-        }else{
+        } else {
             descuento = 20;
         }
-    }else if(cantidadLamparas == 3){
-        if(marcaLamparas == "ArgentinaLuz"){
+    } else if (cantidadLamparas == 3) {
+        if (marcaLamparas == "ArgentinaLuz") {
             descuento = 15;
-        }else if(marcaLamparas == "FelipeLamparas"){
+        } else if (marcaLamparas == "FelipeLamparas") {
             descuento = 10;
-        }else{
+        } else {
             descuento = 5;
         }
+    }else{
+        descuento = 0;
     }
+    }
+//CALCULOS FINALES
+    precioConDescuento = precioUnitario - precioUnitario * descuento / 100;
+    precioFinal = precioConDescuento * cantidadLamparas;
 
-    document.getElementById("txtIdprecioDescuento").value = precioConDescuento
+if(precioFinal > 120){
+    impuestoPagado = precioFinal * impuesto / 100;
+    precioConImpuesto = precioFinal + impuestoPagado;
+    mensaje = "Usted pagó IIBB $" + impuestoPagado;
+    alert(mensaje);
+}else{
+    mensaje = "No le corresponde pagar IIBB"
+    alert(mensaje)
+}
+//MOSTRAR RESULTADOS
+    document.getElementById("txtIdprecioDescuento").value = precioFinal;
 }
