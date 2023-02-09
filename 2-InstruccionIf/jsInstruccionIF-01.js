@@ -3,21 +3,25 @@
 function mostrar()
 {
     let nombre;
+    let alturaIngresada;
     let pesoIngresado;
+    let imc;
     let mensaje;
 
     nombre = prompt("Ingrese su nombre.");
     pesoIngresado = parseFloat(document.getElementById("txtIdEdad").value);
+    alturaIngresada = parseFloat(prompt("Ingrese su altura."));
+    imc = pesoIngresado / (alturaIngresada * alturaIngresada)
 
-    if(pesoIngresado <= 18.5){
+    if(imc <= 18.5){
         mensaje = nombre + ", usted tiene bajo peso";
-    }else if(pesoIngresado < 25 ){
+    }else if(imc < 25 ){
         mensaje = nombre + ", usted tiene peso normal";
-    }else if(pesoIngresado < 27){
+    }else if(imc < 27){
         mensaje = nombre + ", usted tiene preobesidad";
-    }else if(pesoIngresado < 30){
+    }else if(imc < 30){
         mensaje = nombre + ", usted tiene obesidad I";
-    }else if(pesoIngresado < 35){
+    }else if(imc < 35){
         mensaje = nombre + ", usted tiene obesidad II";
     }else{
         mensaje = nombre + ", usted tiene obesidad III";
