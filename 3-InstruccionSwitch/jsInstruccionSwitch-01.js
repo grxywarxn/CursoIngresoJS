@@ -6,12 +6,12 @@ si es Julio: "se vienen las vacaciones!!!."
 si es Diciembre: "Felices fiesta!!!." */
 function mostrar()
 {
-	let mesDelAño;
+	let mesDelAnio;
 	let mensaje;
 
-	mesDelAño = document.getElementById("txtIdMes").value;
+	mesDelAnio = document.getElementById("txtIdMes").value;
 
-	switch(mesDelAño){
+	switch(mesDelAnio){
 		case "Enero":
 			mensaje = "que comiences bien el año!!!."
 			break;
@@ -28,6 +28,6 @@ function mostrar()
 			mensaje = "sos aburrido"
 			break;
 	}
-	
+
 	alert(mensaje);
 }//FIN DE LA FUNCIÓN
