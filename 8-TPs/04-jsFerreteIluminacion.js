@@ -15,35 +15,36 @@ function CalcularPrecio ()
     let precioConDescuento;
     let ingresosBrutos;
     let precioUnitario;
-    let impuestoPagado;
+    let descuento;
 
     cantidadLamparas = parseInt(document.getElementById("txtIdCantidad").value);
     marcaLamparas = document.getElementById("Marca").value;
     ingresosBrutos = 1.1
     precioUnitario = 35
 
-    if(cantidadLamparas >= 6){
-        precioConDescuento = (cantidadLamparas * precioUnitario)/2;
-    }else if(cantidadLamparas == 5 && marcaLamparas == "ArgentinaLuz"){
-        precioConDescuento = cantidadLamparas * precioUnitario * 0.6;
-    }else if(cantidadLamparas == 5 && marcaLamparas != "ArgentinaLuz"){
-        precioConDescuento = cantidadLamparas * precioUnitario * 0.7;   
-    }else if(cantidadLamparas == 4 && (marcaLamparas == "ArgentinaLuz" || marcaLamparas == "FelipeLamparas")){
-        precioConDescuento = cantidadLamparas * precioUnitario * 0.75;
-    }else if(cantidadLamparas == 4){
-        precioConDescuento = cantidadLamparas * precioUnitario * 0.8;
-    }else if(cantidadLamparas == 3 && marcaLamparas == "ArgentinaLuz"){
-        precioConDescuento = cantidadLamparas * precioUnitario * 0.85;
-    }else if(cantidadLamparas == 3 && marcaLamparas == "FelipeLamparas"){
-        precioConDescuento = cantidadLamparas * precioUnitario * 0.9;
+    if(cantidadLamparas > 5){
+        descuento = 50;
+    }else if(cantidadLamparas == 5){
+        if(marcaLamparas == "ArgentinaLuz"){
+            descuento = 40;
+        }else{
+            descuento = 30;
+        }
+    }else if (cantidadLamparas == 4){
+        if(marcaLamparas == "ArgentinaLuz" || "FelipeLamparas"){
+            descuento = 25;
+        }else{
+            descuento = 20;
+        }
     }else if(cantidadLamparas == 3){
-        precioConDescuento = cantidadLamparas * precioUnitario * 0.95;
-    }else{}
-
-    if (precioConDescuento > 120){
-        impuestoPagado = precioConDescuento * ingresosBrutos - precioConDescuento;
-        alert("IIBB Usted pagó: " + impuestoPagado)
+        if(marcaLamparas == "ArgentinaLuz"){
+            descuento = 15;
+        }else if(marcaLamparas == "FelipeLamparas"){
+            descuento = 10;
+        }else{
+            descuento = 5;
+        }
     }
-    
+
     document.getElementById("txtIdprecioDescuento").value = precioConDescuento
 }
