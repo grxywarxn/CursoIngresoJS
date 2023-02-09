@@ -5,12 +5,12 @@ si ya paso el Invierno: "Ya pasamos el frio, ahora calor!!!."
 ACLARAcIÓN: tomamos a Julio y Agosto como los meses de Invierno.*/
 function mostrar()
 {
-	let mesDelAño;
+	let mesDelAnio;
 	let mensaje;
 
-	mesDelAño = document.getElementById("txtIdMes").value;
+	mesDelAnio = document.getElementById("txtIdMes").value;
 
-	switch(mesDelAño){
+	switch(mesDelAnio){
 		case "Mayo" :
 		case "Junio" :
 			mensaje = "Falta para el invierno.";
