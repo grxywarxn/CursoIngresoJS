@@ -1,7 +1,60 @@
 // Luis Claros
-
+//ej 1 bis bis
 function mostrar()
 {
+    let nombre;
+    let pesoIngresado;
+    let mensaje;
+
+    nombre = prompt("Ingrese su nombre.");
+    pesoIngresado = parseFloat(document.getElementById("txtIdEdad").value);
+
+    if(pesoIngresado <= 18.5){
+        mensaje = nombre + ", usted tiene bajo peso";
+    }else if(pesoIngresado < 25 ){
+        mensaje = nombre + ", usted tiene peso normal";
+    }else if(pesoIngresado < 27){
+        mensaje = nombre + ", usted tiene preobesidad";
+    }else if(pesoIngresado < 30){
+        mensaje = nombre + ", usted tiene obesidad I";
+    }else if(pesoIngresado < 35){
+        mensaje = nombre + ", usted tiene obesidad II";
+    }else{
+        mensaje = nombre + ", usted tiene obesidad III";
+    }
+
+    alert(mensaje);
+}
+
+
+/*
+ej 1 bis
+{
+    let distanciaViajada;
+    let tiempoDeViaje;
+    let mensaje;
+    let velocidad;
+
+    distanciaViajada = parseInt(prompt("Ingrese la distancia recorrida."));
+    tiempoDeViaje = parseInt(document.getElementById("txtIdEdad").value);
+    velocidad = distanciaViajada / tiempoDeViaje;
+
+    if(velocidad <= 60){
+        mensaje = "muy lento";
+    }else if(velocidad <= 80){
+        mensaje = "lento";
+    }else if(velocidad <= 100){
+        mensaje = "buen ritmo";
+    }else if(velocidad <= 120){
+        mensaje = "ahí de la ley"
+    }else{
+        mensaje = "eso no se hace!"
+    }
+    alert(mensaje);
+    
+
+}
+/*{
 	let edadIngresada;
 	let resultado
 
