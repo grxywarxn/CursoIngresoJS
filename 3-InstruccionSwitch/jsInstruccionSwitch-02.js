@@ -14,18 +14,18 @@ function mostrar()
 		case "Mayo" :
 		case "Junio" :
 			mensaje = "Falta para el invierno.";
-		break;
+			break;
 		case "Julio" :
 		case "Agosto" :
 			mensaje = "Abrigate que hace frio.";
-		break;
+			break;
 		case "Septiembre" :
 		case "Octubre" :
 			mensaje = "Ya pasamos el frio, ahora calor!!!."
-		break;
+			break;
 		default :
-			mensaje = "a"
-		break;
+			mensaje = "sin comentarios"
+			break;
 	}
 	
 	alert(mensaje);
