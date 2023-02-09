@@ -4,12 +4,12 @@ si es Febrero: " Este mes no tiene más de 29 días."
 si NO es Febrero: "Este mes tiene 30 o más días"*/
 function mostrar()
 {
-	let mesDelAño;
+	let mesDelAnio;
 	let mensaje;
 
-	mesDelAño = document.getElementById("txtIdMes").value;
+	mesDelAnio = document.getElementById("txtIdMes").value;
 
-	switch(mesDelAño){
+	switch(mesDelAnio){
 		case "Febrero" :
 			mensaje = "Este mes no tiene más de 29 días.";
 			break;
