@@ -10,7 +10,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 
 // DECLARAR VARIABLES
-function CalcularPrecio() {
+function CalcularPrecio() /* {
     let cantidadLamparas;
     let marcaLamparas;
     let descuento;
@@ -70,4 +70,47 @@ if(precioFinal > 120){
 }
 //MOSTRAR RESULTADOS
     document.getElementById("txtIdprecioDescuento").value = precioFinal;
+}
+*/
+{
+    //CREO VARIABLES
+    let COSTO_LAMPARAS = 35;
+    let IMPUESTO_IIBB = 10;
+    let cantidadLamparas;
+    let marcaLamparas;
+    let DESCUENTO;
+    
+    //TOMO LOS DATOS
+
+    cantidadLamparas = parseInt(document.getElementById("txtIdCantidad").value);
+    marcaLamparas = document.getElementById("Marca").value;
+
+    //PROCESO
+
+    if(cantidadLamparas > 5)
+    {
+        DESCUENTO = 50;
+    }
+    else
+    {
+        if(cantidadLamparas == 5)
+        {
+
+        }
+        else
+        {
+            if(cantidadLamparas == 4)
+            {
+
+            }
+            else
+            {
+                if(cantidadLamparas == 3)
+                {
+                    
+                }
+            }
+        }
+    }
+    //INFORMO
 }
