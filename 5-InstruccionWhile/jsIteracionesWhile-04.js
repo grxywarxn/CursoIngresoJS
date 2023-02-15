@@ -1,9 +1,18 @@
+//Luis Claros
 /*
 al presionar el botón 
 pedir un número entre 0 y 9 inclusive.*/
 function mostrar()
 {
-	var numeroIngresado;
-	numeroIngresado = prompt("ingrese un número entre 0 y 10.");
+	let numeroIngresado;
+	let mensaje;
 	
+	numeroIngresado = parseInt(prompt("Ingrese un número entre 0 y 9"));
+
+	while(isNaN(numeroIngresado) || numeroIngresado < 0 || numeroIngresado > 9)
+	{
+		prompt("Ingrese un número válido");
+	}
+
+	document.getElementById("txtIdNumero").value = numeroIngresado;	
 }//FIN DE LA FUNCIÓN
