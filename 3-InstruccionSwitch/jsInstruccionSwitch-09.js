@@ -11,10 +11,11 @@ function mostrar()
 	let porcentaje;
 	let precioConPorcentaje;
 	let mensaje;
-
+	
+	precioBase = 15000;
+	
 	estacion = document.getElementById("txtIdEstacion").value;
 	destino = document.getElementById("txtIdDestino").value;
-	precioBase = 15000;
 
 	switch(estacion){
 		case "Invierno" :
@@ -60,6 +61,7 @@ function mostrar()
 
 		precioConPorcentaje = precioBase + precioBase * porcentaje/100;
 		mensaje = "Su tarifa a pagar es: $" + precioConPorcentaje;
+
 		alert(mensaje);
 
 	}//FIN DE LA FUNCIÓN
