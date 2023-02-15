@@ -5,13 +5,12 @@ pedir un número entre 0 y 9 inclusive.*/
 function mostrar()
 {
 	let numeroIngresado;
-	let mensaje;
 	
 	numeroIngresado = parseInt(prompt("Ingrese un número entre 0 y 9"));
 
 	while(isNaN(numeroIngresado) || numeroIngresado < 0 || numeroIngresado > 9)
 	{
-		prompt("Ingrese un número válido");
+		numeroIngresado = parseInt(prompt("Ingrese un número válido"));
 	}
 
 	document.getElementById("txtIdNumero").value = numeroIngresado;	
