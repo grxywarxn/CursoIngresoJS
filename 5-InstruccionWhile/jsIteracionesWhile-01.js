@@ -8,7 +8,7 @@ function mostrar()
 	let i;
 	let mensaje;
 
-	i = 0
+	i = 0;
 	//PROCESO
 	while(i < 10)
 	{
