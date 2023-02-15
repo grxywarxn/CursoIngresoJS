@@ -5,17 +5,17 @@ con números DESCENDENTES, desde el 10 al 1.*/
 function mostrar()
 {
 	//DECLARO VARIABLES
-	let numero;
+	let i;
 	let mensaje;
 
-	numero = 11
+	i = 11;
 	//PROCESO
-	while(numero > 1)
+	while(i > 1)
 	{
-		numero = numero - 1;
-		console.log(numero);
-		mensaje = "fuera del bucle";
+		i = i - 1;
+		console.log(i);
 	}
 	//INFORMO
+	mensaje = "fuera del bucle";
 	alert(mensaje);
 }//FIN DE LA FUNCIÓN
