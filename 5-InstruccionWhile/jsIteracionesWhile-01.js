@@ -1,21 +1,54 @@
 //Luis Claros
-/*
-al presionar el botón mostrar 10 repeticiones 
-con números ASCENDENTE, desde el 1 al 10.*/
+/*While 1 bis- edad y nombre , informar el nombre de la persona mas vieja y la mas joven*/
 function mostrar()
 {
-	//DECLARO VARIABLES
-	let i;
+	let nombreIngresado;
+	let edadIngresada;
+	let edadMenor;
+	let edadMayor;
+	let nombreMenor;
+	let nombreMayor;
+	let bandera;
 	let mensaje;
 
-	i = 0;
-	//PROCESO
-	while(i < 10)
-	{
-		i = i + 1;
-		console.log(i);
+	bandera = true;
+	respuesta = "si";
+	
+	while(respuesta == "si")
+	{	
+		nombreIngresado = prompt("Ingrese su nombre");
+		while(!isNaN(nombreIngresado))
+		{
+			nombreIngresado = prompt("Ingrese un nombre válido");
+		}
+		edadIngresada = parseInt(prompt("Ingrese su edad"));
+		while(isNaN(edadIngresada) || edadIngresada < 0 || edadIngresada > 130)
+		{
+			parseInt(prompt("Ingrese una edad válida"));
+		}
+		if(bandera == true)
+		{
+			edadMayor = edadIngresada;
+			edadMenor = edadIngresada;
+			nombreMayor = nombreIngresado;
+			nombreMenor = nombreIngresado;
+			bandera = false;
+		}
+		else
+		{
+			if(edadIngresada < edadMenor)
+			{
+			edadMenor = edadIngresada;
+			nombreMenor = nombreIngresado;
+			}
+			else
+			{
+			edadMayor = edadIngresada;
+			nombreMayor = nombreIngresado;
+			}
+		}
+		respuesta = prompt("¿Quiere seguir ingresando nombres? si/no");
 	}
-	//INFORMO
-	mensaje = "fuera del bucle";
-	alert(mensaje);
-}//FIN DE LA FUNCIÓN
+	mensaje = nombreMayor + " es la persona mayor y " + nombreMenor + " es la persona menor.";
+	document.write(mensaje);
+}
