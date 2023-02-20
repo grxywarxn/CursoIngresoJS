@@ -13,13 +13,11 @@ function mostrar()
 
 	for(let i = 0;				i < 4; 				i ++)
 	{
-		numeroIngresado = prompt("Ingrese un número");
-		numeroIngresado = parseInt(numeroIngresado);
+		numeroIngresado = parseInt(prompt("Ingrese un número"));
 		
 		while(isNaN(numeroIngresado))
 		{
 			numeroIngresado = parseInt(prompt("Error, ingrese un número válido"));
-			numeroIngresado = parseInt(numeroIngresado);
 		}
 		contador = contador + 1;
 		acumulador = acumulador + numeroIngresado;
