@@ -1,21 +1,23 @@
 //Luis Claros
 /*
-al presionar el botón mostrar 10 repeticiones 
-con números DESCENDENTES, desde el 10 al 1.*/
+while 2 bis: Ingresar 5 números, y determinar la cantidad de números que son mayores que 10 y menores 20
+(inclusive en ambos casos)*/
 function mostrar()
 {
-	//DECLARO VARIABLES
-	let i;
-	let mensaje;
+	let numeroIngresado;
+	let contador;
+	let contadorMenores;
+	let contadorMayores;
+	
+	contador = 0;
 
-	i = 11;
-	//PROCESO
-	while(i > 1)
+	while(contador < 5)
 	{
-		i = i - 1;
-		console.log(i);
+		numeroIngresado = parseInt(prompt("Ingrese un número"));
+
+		while(isNaN(numeroIngresado) || numeroIngresado > 0 || numeroIngresado < 20)
+		{
+
+		}
 	}
-	//INFORMO
-	mensaje = "fuera del bucle";
-	alert(mensaje);
-}//FIN DE LA FUNCIÓN
+}
