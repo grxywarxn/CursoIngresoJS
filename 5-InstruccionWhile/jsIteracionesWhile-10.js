@@ -22,8 +22,6 @@ function mostrar()
 	let contadorNegativos; // 4
 	let contadorCeros; // 5
 	let contadorPares; //6
-	let parPositivo;
-	let parNegativo;
 	let promedioPositivos; // 7 
 	let promedioNegativos; // 8
 	let diferenciaPositivosNegativos; // 9
@@ -63,10 +61,7 @@ function mostrar()
 			}
 		}
 
-		parPositivo = numeroIngresado % 2;
-		parNegativo = numeroIngresado % -2;
-
-		if(parPositivo == 0 || parNegativo == 0)
+		if(numeroIngresado % 2 == 0 && numeroIngresado != 0)
 		{
 			contadorPares = contadorPares + 1;
 		}
@@ -74,7 +69,7 @@ function mostrar()
 	}
 	promedioPositivos = sumaPositivos / contadorPositivos;
 	promedioNegativos = sumaNegativos / contadorNegativos;
-	diferenciaPositivosNegativos = promedioPositivos - promedioNegativos;
+	diferenciaPositivosNegativos = sumaPositivos + sumaNegativos;
 
 	console.log("la suma de negativos es : " + sumaNegativos);
 	console.log("la suma de positivos es : " + sumaPositivos);
