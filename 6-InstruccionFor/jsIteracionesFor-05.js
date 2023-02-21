@@ -1,7 +1,15 @@
+//Luis Claros
 function mostrar()
 {
-	alert("ok");
+	let repetir;
+	let i;
 
-
-
+	for(i = 0; i < 1000; i++)
+	{
+		repetir = prompt("Ingrese un número, ingrese 9 para finalizar.");
+		if(repetir == "9")
+		{
+			break;
+		}
+	}
 }//FIN DE LA FUNCIÓN
