@@ -24,7 +24,7 @@ function mostrar()
 		edadIngresada = parseInt(prompt("Ingrese su edad"));
 		while(isNaN(edadIngresada) || edadIngresada < 0 || edadIngresada > 130)
 		{
-			parseInt(prompt("Ingrese una edad válida"));
+			edadIngresada = parseInt(prompt("Ingrese una edad válida"));
 		}
 		if(bandera == true)
 		{
