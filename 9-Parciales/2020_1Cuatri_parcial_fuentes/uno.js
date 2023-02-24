@@ -26,7 +26,6 @@ function mostrar() {
 	let contadorComprasBarbijo;
 	let contadorComprasJabon;
 	let contadorComprasAlcohol;
-	let bandera;
 
 	acumuladorAlcohol = 0;
 	acumuladorAlcoholBarato = 0;
