@@ -32,7 +32,7 @@ while (!isNaN(ingGenero) || ingGenero != "masculino" && ingGenero != "femenino" 
     ingGenero = prompt("Error. Ingrese su género: masculino, femenino o no binario");
 }
 //VALIDACIÓN NACIONALIDAD - REEMPLAZAR PAISES
-ingNacionalidad = prompt("Ingrese su nacionalidad: x1, x2 o x3")
+ingNacionalidad = prompt("Ingrese su nacionalidad: x1, x2 o x3");
 ingNacionalidad = ingNacionalidad.toLowerCase();
 while (!isNaN(ingNacionalidad) || ingNacionalidad != "x1" && ingNacionalidad != "x2" && ingNacionalidad != "x3") {
     ingNacionalidad = prompt("Error. Ingrese su nacionalidad: x1, x2 o x3");
