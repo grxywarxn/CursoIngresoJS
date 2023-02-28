@@ -49,12 +49,12 @@ while (isNaN(ingPeso) || ingPeso < 0) {
 }
 //VALIDACIÓN NUMERO
 ingNumero = parseInt(prompt("Ingrese un número: "));
-while(isNaN(ingNumero)){
+while (isNaN(ingNumero)) {
     ingNumero = parseInt(prompt("Error. Ingrese un número: "));
 }
 //VALIDACIÓN PRECIO
 ingPrecio = parseInt(prompt("Ingrese un precio: "));
-while(isNaN(ingPrecio) || ingPrecio < 0 || ingPrecio > 0){
+while (isNaN(ingPrecio) || ingPrecio < 0 || ingPrecio > 0) {
     ingPrecio = parseInt(prompt("Error. Ingrese un precio: "));
 }
 
@@ -62,7 +62,7 @@ while(isNaN(ingPrecio) || ingPrecio < 0 || ingPrecio > 0){
 porcentajeX = (contX * 100 / contXTOTAL).toFixed(1)
 
 //ESTRUCTURA SWITCH 3 CASOS
-switch(ing){
+switch (ing) {
     case "":
 
         break;
@@ -78,22 +78,22 @@ switch(ing){
 let continuar;
 continuar = true;
 
-while(continuar == true){
+while (continuar == true) {
 
     continuar = confirm("¿Desea seguir ingresando datos?")
 }
 
 //ESTRUCTURA FOR - ITERACIONES DEFINIDAS
-for(let i = 0; i < x; i++){
+for (let i = 0; i < x; i++) {
 
 }
 
 //BANDERA NUMERO MÁXIMO Y MÍNIMO(OPCIONAL) - SE PUEDE GUARDAR NOMBRES O ESTADOS TAMBIÉN.
 
-if(bandera == true || ingNumero > max) {
+if (bandera == true || ingNumero > max) {
     max = ingNumero;
     bandera = false;
-}else if(ingNumero < min){
+} else if (ingNumero < min) {
     min = ingNumero;
 }
 
@@ -106,23 +106,39 @@ if (vacuna == "si" && banderaVacuna == true || vacuna == "si" && edadMasVieja < 
 
 //COMPARACIÓN DEL MÁXIMO ENTRE 3
 
-if(x1 > x2 && x1 > x3){
+if (x1 > x2 && x1 > x3) {
     maxNum = "x1";
-}else if(x2 > x1 && x2 > x3){
+} else if (x2 > x1 && x2 > x3) {
     maxNum = "x2";
-}else{
+} else {
     maxNum = "x3";
 }
 
-//MOSTRAR RESULTADOS
-console.log(""+x);
-console.log(""+x);
-console.log(""+x);
-console.log(""+x);
-console.log(""+x);
+//APLICAR DESCUENTOS
+if (cont > 9 && cont < 30) {
+    descuento = ;
+} else if (cont > 29) {
+    descuento = ;
+} else {
+    descuento = 0;
+}
 
-document.write(""+"<br>");
-document.write(""+"<br>");
-document.write(""+"<br>");
-document.write(""+"<br>");
-document.write(""+x);
+//MOSTRAR RESULTADOS
+console.log("" + x);
+console.log("" + x);
+console.log("" + x);
+console.log("" + x);
+console.log("" + x);
+
+document.write("" + "<br>");
+document.write("" + "<br>");
+document.write("" + "<br>");
+document.write("" + "<br>");
+document.write("" + x);
+
+//RESULTADOS CONDICIONADOS
+if (descuento > 0) {
+    console.log("El importe con descuento a pagar es: " + acumPreciosDescuento);
+} else {
+    console.log("No se aplica ningún descuento para su compra");
+}
