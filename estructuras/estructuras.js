@@ -10,51 +10,51 @@ let ingNacionalidad;
 let ingNumero;
 let ingPrecio;
 
-//VALIDACION NOMBRE
+//VALIDACIÓN NOMBRE
 ingNombre = prompt("Ingrese su nombre: ");
 while (!isNaN(ingNombre)) {
     ingNombre = prompt("Error. Ingrese su nombre: ");
 }
-//VALIDACION APELLIDO
+//VALIDACIÓN APELLIDO
 ingApellido = prompt("Ingrese su apellido: ");
 while (!isNaN(ingApellido)) {
     ingApellido = prompt("Error. Ingrese su apellido: ");
 }
-//VALIDACION EDAD
+//VALIDACIÓN EDAD
 edadIngresada = parseInt(prompt("Ingrese su edad (1 a 130)"))
 while (isNaN(edadIngresada) || edadIngresada < 0 || edadIngresada > 130) {
     edadIngresada = parseInt(prompt("Error: ingrese una edad válida (1 a 130)"));
 }
-//VALIDACION GÉNERO
+//VALIDACIÓN GÉNERO
 ingGenero = prompt("Ingrese su género: masculino, femenino o no binario")
 ingGenero = ingGenero.toLowerCase();
 while (!isNaN(ingGenero) || ingGenero != "masculino" && ingGenero != "femenino" && ingGenero != "no binario") {
     ingGenero = prompt("Error. Ingrese su género: masculino, femenino o no binario");
 }
-//VALIDACION NACIONALIDAD - REEMPLAZAR PAISES
+//VALIDACIÓN NACIONALIDAD - REEMPLAZAR PAISES
 ingNacionalidad = prompt("Ingrese su nacionalidad: x1, x2 o x3")
 ingNacionalidad = ingNacionalidad.toLowerCase();
 while (!isNaN(ingNacionalidad) || ingNacionalidad != "x1" && ingNacionalidad != "x2" && ingNacionalidad != "x3") {
     ingNacionalidad = prompt("Error. Ingrese su nacionalidad: x1, x2 o x3");
 }
-//VALIDACION ALTURA
-ingAltura = parseInt(prompt("Ingrese su altura: "));
+//VALIDACIÓN ALTURA
+ingAltura = parseFloat(prompt("Ingrese su altura: "));
 while (isNaN(ingAltura) || ingAltura < 0) {
-    ingAltura = prompt("Error. Ingrese su altura: ");
+    ingAltura = parseFloat(prompt("Error. Ingrese su altura: "));
 }
-//VALIDACION PESO
+//VALIDACIÓN PESO
 ingPeso = parseInt(prompt("Ingrese su peso: "));
 while (isNaN(ingPeso) || ingPeso < 0) {
     ingPeso = prompt("Error. Ingrese su peso: ");
 }
-//VALIDACION NUMERO
+//VALIDACIÓN NUMERO
 ingNumero = parseInt(prompt("Ingrese un número: "));
 while(isNaN(ingNumero)){
     ingNumero = parseInt(prompt("Error. Ingrese un número: "));
 }
-//VALIDACION PRECIO
+//VALIDACIÓN PRECIO
 ingPrecio = parseInt(prompt("Ingrese un precio: "));
-while(isNaN(ingPrecio) || ingPrecio < 0){
+while(isNaN(ingPrecio) || ingPrecio < 0 || ingPrecio > 0){
     ingPrecio = parseInt(prompt("Error. Ingrese un precio: "));
 }
 
@@ -62,14 +62,14 @@ while(isNaN(ingPrecio) || ingPrecio < 0){
 porcentajeX = (contX * 100 / contXTOTAL).toFixed(1)
 
 //ESTRUCTURA SWITCH 3 CASOS
-switch(x){
-    case "x1":
+switch(ing){
+    case "":
 
         break;
-    case "x2":
+    case "":
 
         break;
-    case "x3":
+    case "":
 
         break;
 }
@@ -88,7 +88,7 @@ for(let i = 0; i < x; i++){
 
 }
 
-//BANDERA NUMERO MAXIMO Y MINIMO(OPCIONAL) - SE PUEDE GUARDAR NOMBRES O ESTADOS TAMBIEN.
+//BANDERA NUMERO MÁXIMO Y MÍNIMO(OPCIONAL) - SE PUEDE GUARDAR NOMBRES O ESTADOS TAMBIÉN.
 
 if(bandera == true || ingNumero > max) {
     max = ingNumero;
@@ -104,7 +104,7 @@ if (vacuna == "si" && banderaVacuna == true || vacuna == "si" && edadMasVieja < 
     banderaVacuna = false;
 }
 
-//COMPARACIÓN DEL MAXIMO ENTRE 3
+//COMPARACIÓN DEL MÁXIMO ENTRE 3
 
 if(x1 > x2 && x1 > x3){
     maxNum = "x1";
@@ -113,3 +113,16 @@ if(x1 > x2 && x1 > x3){
 }else{
     maxNum = "x3";
 }
+
+//MOSTRAR RESULTADOS
+console.log(""+x);
+console.log(""+x);
+console.log(""+x);
+console.log(""+x);
+console.log(""+x);
+
+document.write(""+"<br>");
+document.write(""+"<br>");
+document.write(""+"<br>");
+document.write(""+"<br>");
+document.write(""+x);
