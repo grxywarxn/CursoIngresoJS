@@ -57,6 +57,21 @@ if (true) {
 } else {
     console.log("No se registraron ");
 }
+
+if (true) {
+    console.log("" + nombre);
+} else {
+    console.log("No se registraron ");
+}
+console.log("" + nombre);
+console.log("" + nombre);
+console.log("" + nombre);
+
+if (true) {
+    console.log(" " + nombre);
+} else {
+    console.log("No se registraron ");
+}
 //MOSTRAR PROMEDIOS EN CASO DE EXISTIR
 if (promedio1 > 0) {
     console.log("El promedio de " + promedio1);
