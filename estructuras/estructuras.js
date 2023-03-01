@@ -25,9 +25,15 @@ while (!isNaN(ingApellido)) {
 }
 
 //VALIDACIÓN EDAD
-edadIngresada = parseInt(prompt("Ingrese su edad (1 a 130)"))
-while (isNaN(edadIngresada) || edadIngresada < 0 || edadIngresada > 130) {
-    edadIngresada = parseInt(prompt("Error: ingrese una edad válida (1 a 130)"));
+ingEdad = parseInt(prompt("Ingrese su edad (1 a 130)"))
+while (isNaN(ingEdad) || ingEdad < 0 || ingEdad > 130) {
+    ingEdad = parseInt(prompt("Error: ingrese una edad válida (1 a 130)"));
+}
+
+//VALIDACIÓN EDAD MAYOR A 18
+ingEdad = parseInt(prompt("Ingrese su edad (18 o más)"))
+while (isNaN(ingEdad) || ingEdad < 17 || ingEdad > 130) {
+    ingEdad = parseInt(prompt("Error: ingrese una edad válida (18 o más)"));
 }
 
 //VALIDACIÓN ESTADO CIVIL
@@ -65,22 +71,27 @@ while (!isNaN(ingNacionalidad)) {
     ingNacionalidad = prompt("Error. Ingrese su nacionalidad: ");
 }
 
-//VALIDACIÓN ALTURA
-ingAltura = parseFloat(prompt("Ingrese su altura: "));
-while (isNaN(ingAltura) || ingAltura < 0) {
-    ingAltura = parseFloat(prompt("Error. Ingrese su altura: "));
+//VALIDACIÓN ALTURA EN CENTÍMETROS
+ingAltura = parseInt(prompt("Ingrese su altura en centímetros: "));
+while (isNaN(ingAltura) || ingAltura < 0 || ingAltura > 300) {
+    ingAltura = parseInt(prompt("Error. Ingrese su altura en centímetros: ")) || ingAltura > 300;
 }
 
+//VALIDACIÓN ALTURA EN METROS
+ingAltura = parseFloat(prompt("Ingrese su altura en metros: "));
+while (isNaN(ingAltura) || ingAltura < 0 || ingAltura > 3) {
+    ingAltura = parseFloat(prompt("Error. Ingrese su altura en metros: ")) || ingAltura > 300;
+}
 //VALIDACIÓN PESO
 ingPeso = parseFloat(prompt("Ingrese su peso: "));
-while (isNaN(ingPeso) || ingPeso < 0) {
+while (isNaN(ingPeso) || ingPeso < 0 || ingPeso > 250) {
     ingPeso = parseFloat(prompt("Error. Ingrese su peso: "));
 }
 
 //VALIDACIÓN TEMPERATURA CORPORAL
-ingTemperaturaCorporal = parseFloat(prompt("Ingrese su temperatura: "));
+ingTemperaturaCorporal = parseFloat(prompt("Ingrese su temperatura: (34 a 44)"));
 while (isNaN(ingTemperaturaCorporal) || ingTemperaturaCorporal < 34 || ingTemperaturaCorporal > 44) {
-    ingTemperaturaCorporal = parseFloat(prompt("Error. Ingrese su temperatura: "));
+    ingTemperaturaCorporal = parseFloat(prompt("Error. Ingrese su temperatura: (34 a 44)"));
 }
 
 //VALIDACIÓN NUMERO
@@ -91,7 +102,7 @@ while (isNaN(ingNumero)) {
 
 //VALIDACIÓN PRECIO
 ingPrecio = parseInt(prompt("Ingrese un precio: "));
-while (isNaN(ingPrecio) || ingPrecio < 0 || ingPrecio > 0) {
+while (isNaN(ingPrecio) || ingPrecio < 0 || ingPrecio > 1000) {
     ingPrecio = parseInt(prompt("Error. Ingrese un precio: "));
 }
 
@@ -144,6 +155,18 @@ if (banderaVacuna == true && vacuna == "si" || vacuna == "si" && edadMasVieja < 
     nombreMasViejo = nombre;
     banderaVacuna = false;
 }
+
+//SI TENGO UN CONTADOR PUEDO USARLO PARA INICIALIZAR LA PRIMERA VEZ QUE INGRESEN DATOS, USARLO COMO BANDERA;
+if(contador == 0 || ing > max){
+    nombreMax = ingNombre;
+    max = ing
+}
+//PARA MÍNIMOS
+if(contador == 0 || ing < min){
+    nombreMin = ingNombre;
+    min = ing
+}
+
 
 //COMPARACIÓN DEL MÁXIMO ENTRE 3
 
