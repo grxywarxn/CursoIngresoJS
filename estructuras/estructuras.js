@@ -49,6 +49,12 @@ while (isNaN(ingEdad) || ingEdad < 18 || ingEdad > 130) {
     ingEdad = parseInt(prompt("Error: ingrese una edad válida (18 o más)"));
 }
 
+//VALIDACION NOTA
+ingNota = parseInt(prompt("Ingrese su nota: (entre 1  y 10)"));
+while (isNaN(ingNota) || ingNota < 1 || ingNota > 10) {
+    ingNota = parseInt(prompt("Error. Ingrese su nota: (entre 1  y 10)"));
+}
+
 //VALIDACIÓN ESTADO CIVIL
 ingEstadoCivil = prompt("Ingrese su estado civil: soltero, casado o viudo")
 ingEstadoCivil = ingEstadoCivil.toLowerCase();
