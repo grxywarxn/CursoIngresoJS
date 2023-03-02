@@ -42,6 +42,8 @@ while (continuar == true) {
     }
     continuar = confirm("¿Desea seguir ingresando datos?")
 }
+
+
 promedio1 = acumulador1 / contador1;
 promedio2 = acumulador3 / contador3;
 promedio3 = acumulador2 / contador2;
