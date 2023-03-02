@@ -24,15 +24,28 @@ while (!isNaN(ingApellido)) {
     ingApellido = prompt("Error. Ingrese su apellido: ");
 }
 
-//VALIDACIÓN EDAD
+//VALIDACION 2 OPCIONES X
+ingRecursanteONo = prompt("ingrese si es : 'si' o 'no'");
+ingRecursanteONo = ingRecursanteONo.toLowerCase();
+while (ingRecursanteONo != "si" && ingRecursanteONo != "no") {
+    ingRecursanteONo = prompt("Ingrese si es : 'si' o 'no'")
+}
+
+//VALIDACION LEGAJO
+ingLegajo = parseInt(prompt("Ingrese su número de legajo: (entre 1  y 10000)"));
+while (isNaN(ingLegajo) || ingLegajo < 1 || ingLegajo > 10000) {
+    ingLegajo = parseInt(prompt("Error. Ingrese su número de legajo: (entre 1  y 10000)"));
+}
+
+//VALIDACIÓN EDAD 1 A 130
 ingEdad = parseInt(prompt("Ingrese su edad (1 a 130)"))
-while (isNaN(ingEdad) || ingEdad < 0 || ingEdad > 130) {
+while (isNaN(ingEdad) || ingEdad < 1 || ingEdad > 130) {
     ingEdad = parseInt(prompt("Error: ingrese una edad válida (1 a 130)"));
 }
 
 //VALIDACIÓN EDAD MAYOR A 18
 ingEdad = parseInt(prompt("Ingrese su edad (18 o más)"))
-while (isNaN(ingEdad) || ingEdad < 17 || ingEdad > 130) {
+while (isNaN(ingEdad) || ingEdad < 18 || ingEdad > 130) {
     ingEdad = parseInt(prompt("Error: ingrese una edad válida (18 o más)"));
 }
 
@@ -106,11 +119,31 @@ while (isNaN(ingPrecio) || ingPrecio < 0 || ingPrecio > 1000) {
     ingPrecio = parseInt(prompt("Error. Ingrese un precio: "));
 }
 
+//VALIDACIÓN IMPORTE
+ingImporte = parseInt(prompt("Ingrese el importe del pasaje: (entre 1  y 300000)"));
+while (isNaN(ingImporte) || ingImporte < 0 || ingImporte > 300000) {
+    ingImporte = parseInt(prompt("Error. Ingrese el importe del pasaje: (entre 0  y 300000)"));
+}
+
 //VALIDACIÓN POR TIPO DE PRODUCTO
 ingTipoProducto = prompt("ingrese el tipo de producto: 'x1', 'x2' o 'x3'");
 ingTipoProducto = ingTipoProducto.toLowerCase();
 while (ingTipoProducto != "x1" && ingTipoProducto != "x2" && ingTipoProducto != "x3") {
     ingTipoProducto = prompt("Ingrese el tipo de producto: 'x1', 'x2' o 'x3'")
+}
+
+//VALIDACION TIPO DE VENTA
+ingTipoVenta = prompt("ingrese el tipo de venta: 'online' o 'local'");
+ingTipoVenta = ingTipoVenta.toLowerCase();
+while (ingTipoVenta != "online" && ingTipoVenta != "local") {
+    ingTipoVenta = prompt("Ingrese el tipo de venta: 'online' o 'local'")
+}
+
+//VALIDACION DIVISIONES CON TOUPPERCASE
+ingDivision = prompt("ingrese su división: 'A', 'B' o 'C'");
+ingDivision = ingDivision.toUpperCase();
+while (ingDivision != "A" && ingDivision != "B" && ingDivision != "C") {
+    ingDivision = prompt("Ingrese su división: 'A', 'B' o 'C'")
 }
 
 //ESTRUCTURA SWITCH 3 CASOS
@@ -127,8 +160,7 @@ switch (ing) {
 }
 
 //ESTRUCTURA WHILE - REPETICIONES INDEFINIDAS
-let continuar;
-continuar = true;
+let continuar = true;
 
 while (continuar == true) {
 
@@ -193,27 +225,40 @@ porcentaje = (contX * 100 / contTOTAL).toFixed(1)
 //PROMEDIOS
 promedio = acu / cont;
 
+promedio1 = acumulador1 / contador1;
+promedio2 = acumulador3 / contador3;
+promedio3 = acumulador2 / contador2;
+
 //MOSTRAR RESULTADOS
 console.log("" + x);
 console.log("" + x);
-console.log("" + x);
-console.log("" + x);
-console.log("" + x);
 
-document.write("" + "<br>");
-document.write("" + "<br>");
+
 document.write("" + "<br>");
 document.write("" + "<br>");
 document.write("" + x);
 
 //RESULTADOS CONDICIONADOS
-if (descuento > 0) {
-    console.log("El importe con descuento a pagar es: " + acumPreciosDescuento);
+if (true) {
+    console.log("" + nombre);
 } else {
-    console.log("No se aplica ningún descuento para su compra");
+    console.log("No se registraron ");
 }
-if (contEdadMujeresCasadas != 0) {
-    console.log("El promedio de edad entre las mujeres casadas es: " + promedioEdadMujeresCasadas);
+if (true) {
+    console.log("" + nombre);
 } else {
-    console.log("No se registraron mujeres casadas para calcular un promedio.");
+    console.log("No se registraron ");
 }
+if (true) {
+    console.log("" + nombre);
+} else {
+    console.log("No se registraron ");
+}
+if (true) {
+    console.log("" + nombre + " y su edad es: " + edad);
+} else {
+    console.log("No se registraron ");
+}
+
+//MINOMBRE
+//Luis Claros
