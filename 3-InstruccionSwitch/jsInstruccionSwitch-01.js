@@ -14,7 +14,7 @@ ciertas métricas en base a las ventas de sus productos.
 // C- La cantidad de ventas que sean de “Memorias” y cuesten menos de $850.*/
 function mostrar() {
 	let ingNombreProducto;
-	let ingGeneroProducto;
+	let ingTipoProducto;
 	let ingTipoVenta;
 	let ingImporte;
 
