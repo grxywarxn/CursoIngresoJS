@@ -3,10 +3,10 @@ for (let i = 0; i < 10; i++) {
     while (!isNaN(ingNombre)) {
         ingNombre = prompt("Error. Ingrese su nombre: ");
     }
-    ingTipoProducto = prompt("ingrese el tipo de producto: 'golosina', 'bebida' o 'cigarrillo'");
-    ingTipoProducto = ingTipoProducto.toLowerCase();
-    while (ingTipoProducto != "golosina" && ingTipoProducto != "bebida" && ingTipoProducto != "cigarrillo") {
-        ingTipoProducto = prompt("Ingrese el tipo de producto: 'golosina', 'bebida' o 'cigarrillo'")
+    x = prompt("ingrese el tipo de producto: 'x1', 'x2' o 'x3'");
+    x = x.toLowerCase();
+    while (x != "x1" && x != "x2" && x != "x3") {
+        x = prompt("Ingrese el tipo de producto: 'x1', 'x2' o 'x3'")
     }
     ingPrecioUnitario = parseFloat(prompt("Ingrese el precio unitario: (entre 1  y 1000)"));
     while (isNaN(ingPrecioUnitario) || ingPrecioUnitario < 1 || ingPrecioUnitario > 10) {
@@ -18,15 +18,15 @@ for (let i = 0; i < 10; i++) {
     }
 
     acumIngresosTotales = acumIngresosTotales + (ingPrecioUnitario * ingCantidadUnidades);
-    switch (ingTipoProducto) {
-        case "golosina":
+    switch (x) {
+        case "x1":
             contVentrasGolosinas = contVentrasGolosinas + 1;
             acumGolosinas = acumGolosinas + ingCantidadUnidades;
             break;
-        case "bebida":
+        case "x2":
             contBebidas = contBebidas + 1;
             break;
-        case "cigarrillo":
+        case "x3":
         
             break;
     }
