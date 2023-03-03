@@ -188,9 +188,9 @@ if (bandera == true || ingNumero > max) {
 }
 
 //BANDERA NUMERO MAS ALTO CON UNA CONDICIÓN 
-if (banderaVacuna == true && vacuna == "si" || vacuna == "si" && edadMasVieja < edad) {
-    masVieja = edad;
-    nombreMasViejo = nombre;
+if (vacuna == "si" && (banderaVacuna == true || ing > max)) {
+    max = ing;
+    maxNombre = ingNombre;
     banderaVacuna = false;
 }
 
