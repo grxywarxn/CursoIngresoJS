@@ -6,7 +6,7 @@ function mostrar()
 	let mensaje;
 	let i;
 	contadorDivisores = 0;
- 
+
 	numeroIngresado = parseInt(prompt("Ingrese un numero."));
 
 	for(i = 1; i <= numeroIngresado; i++)
