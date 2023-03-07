@@ -41,19 +41,6 @@ if (true) {
     console.log("No se registraron ");
 }
 
-if (true) {
-    console.log(" " + nombre);
-} else {
-    console.log("No se registraron ");
-}
-
-if (true) {
-    console.log("" + nombre);
-} else {
-    console.log("No se registraron ");
-}
-
-console.log("" + nombre);
 console.log("" + nombre);
 console.log("" + nombre);
 
