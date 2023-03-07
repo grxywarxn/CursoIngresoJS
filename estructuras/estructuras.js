@@ -25,10 +25,10 @@ while (!isNaN(ingApellido)) {
 }
 
 //VALIDACION 2 OPCIONES X
-ingRecursanteONo = prompt("ingrese si es : 'si' o 'no'");
-ingRecursanteONo = ingRecursanteONo.toLowerCase();
-while (ingRecursanteONo != "si" && ingRecursanteONo != "no") {
-    ingRecursanteONo = prompt("Ingrese si es : 'si' o 'no'")
+ingSi_O_No = prompt("ingrese si es : 'si' o 'no'");
+ingSi_O_No = ingSi_O_No.toLowerCase();
+while (ingSi_O_No != "si" && ingSi_O_No != "no") {
+    ingSi_O_No = prompt("Ingrese si es : 'si' o 'no'")
 }
 
 //VALIDACION LEGAJO
@@ -38,15 +38,15 @@ while (isNaN(ingLegajo) || ingLegajo < 1 || ingLegajo > 10000) {
 }
 
 //VALIDACIÓN EDAD 1 A 130
-ingEdad = parseInt(prompt("Ingrese su edad (1 a 130)"))
+ingEdad = parseInt(prompt("Ingrese su edad: (1 a 130)"))
 while (isNaN(ingEdad) || ingEdad < 1 || ingEdad > 130) {
-    ingEdad = parseInt(prompt("Error: ingrese una edad válida (1 a 130)"));
+    ingEdad = parseInt(prompt("Error. Ingrese una edad válida: (1 a 130)"));
 }
 
 //VALIDACIÓN EDAD MAYOR A 18
-ingEdad = parseInt(prompt("Ingrese su edad (18 o más)"))
+ingEdad = parseInt(prompt("Ingrese su edad: (18 a 130)"))
 while (isNaN(ingEdad) || ingEdad < 18 || ingEdad > 130) {
-    ingEdad = parseInt(prompt("Error: ingrese una edad válida (18 o más)"));
+    ingEdad = parseInt(prompt("Error. Ingrese una edad válida: (18 o más)"));
 }
 
 //VALIDACION NOTA
@@ -65,21 +65,21 @@ while (!isNaN(ingEstadoCivil) || ingEstadoCivil != "soltero" && ingEstadoCivil !
 //VALIDACIÓN GÉNERO
 ingGenero = prompt("Ingrese su género: masculino, femenino o no binario")
 ingGenero = ingGenero.toLowerCase();
-while (ingGenero != "masculino" && ingGenero != "femenino" && ingGenero != "no binario") {
+while (!isNaN(ingGenero) || ingGenero != "masculino" && ingGenero != "femenino" && ingGenero != "no binario") {
     ingGenero = prompt("Error. Ingrese su género: masculino, femenino o no binario");
 }
 
 //VALIDACIÓN SEXO
 ingSexo = prompt("Ingrese su sexo: masculino, femenino o no binario")
 ingSexo = ingSexo.toLowerCase();
-while (ingSexo != "masculino" && ingSexo != "femenino" && ingSexo != "no binario") {
+while (!isNaN(ingSexo) || ingSexo != "masculino" && ingSexo != "femenino" && ingSexo != "no binario") {
     ingSexo = prompt("Error. Ingrese su sexo: masculino, femenino o no binario");
 }
 
 //VALIDACIÓN NACIONALIDAD - CON OPCIONES
 ingNacionalidad = prompt("Ingrese su nacionalidad: x1, x2 o x3");
 ingNacionalidad = ingNacionalidad.toLowerCase();
-while (ingNacionalidad != "x1" && ingNacionalidad != "x2" && ingNacionalidad != "x3") {
+while (!isNaN(ingNacionalidad) || ingNacionalidad != "x1" && ingNacionalidad != "x2" && ingNacionalidad != "x3") {
     ingNacionalidad = prompt("Error. Ingrese su nacionalidad: x1, x2 o x3");
 }
 
@@ -93,13 +93,13 @@ while (!isNaN(ingNacionalidad)) {
 //VALIDACIÓN ALTURA EN CENTÍMETROS
 ingAltura = parseInt(prompt("Ingrese su altura en centímetros: "));
 while (isNaN(ingAltura) || ingAltura < 0 || ingAltura > 300) {
-    ingAltura = parseInt(prompt("Error. Ingrese su altura en centímetros: ")) || ingAltura > 300;
+    ingAltura = parseInt(prompt("Error. Ingrese su altura en centímetros: "));
 }
 
 //VALIDACIÓN ALTURA EN METROS
 ingAltura = parseFloat(prompt("Ingrese su altura en metros: "));
 while (isNaN(ingAltura) || ingAltura < 0 || ingAltura > 3) {
-    ingAltura = parseFloat(prompt("Error. Ingrese su altura en metros: ")) || ingAltura > 300;
+    ingAltura = parseFloat(prompt("Error. Ingrese su altura en metros: "));
 }
 //VALIDACIÓN PESO
 ingPeso = parseFloat(prompt("Ingrese su peso: "));
@@ -195,12 +195,12 @@ if (vacuna == "si" && (banderaVacuna == true || ing > max)) {
 }
 
 //SI TENGO UN CONTADOR PUEDO USARLO PARA INICIALIZAR LA PRIMERA VEZ QUE INGRESEN DATOS, USARLO COMO BANDERA;
-if(contador == 0 || ing > max){
+if (contador == 0 || ing > max) {
     nombreMax = ingNombre;
     max = ing
 }
 //PARA MÍNIMOS
-if(contador == 0 || ing < min){
+if (contador == 0 || ing < min) {
     nombreMin = ingNombre;
     min = ing
 }
@@ -226,11 +226,14 @@ if (cont > 9 && cont < 30) {
 }
 
 //PORCENTAJES
-porcentaje = (contX * 100 / contTOTAL).toFixed(1)
+if (contX > 0) {
+    porcentaje = (contX / contTOTAL * 100).toFixed(1)
+}
 // !!!!!INICIALIZAR CONTADORES Y ACUMULADORES EN 0!!!!! REVISAR
 //PROMEDIOS
-promedio = acu / cont;
-
+if (cont > 0) {
+    promedio = acu / cont;
+}
 promedio1 = acumulador1 / contador1;
 promedio2 = acumulador3 / contador3;
 promedio3 = acumulador2 / contador2;
@@ -239,7 +242,6 @@ promedio3 = acumulador2 / contador2;
 console.log("" + x);
 console.log("" + x);
 
-
 document.write("" + "<br>");
 document.write("" + "<br>");
 document.write("" + x);
@@ -247,21 +249,6 @@ document.write("" + x);
 //RESULTADOS CONDICIONADOS
 if (true) {
     console.log("" + nombre);
-} else {
-    console.log("No se registraron ");
-}
-if (true) {
-    console.log("" + nombre);
-} else {
-    console.log("No se registraron ");
-}
-if (true) {
-    console.log("" + nombre);
-} else {
-    console.log("No se registraron ");
-}
-if (true) {
-    console.log("" + nombre + " y su edad es: " + edad);
 } else {
     console.log("No se registraron ");
 }
