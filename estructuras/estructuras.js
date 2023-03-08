@@ -25,7 +25,7 @@ while (!isNaN(ingApellido)) {
 }
 
 //VALIDACION 2 OPCIONES X
-ingSi_O_No = prompt("ingrese si es : 'si' o 'no'");
+ingSi_O_No = prompt("Ingrese si es : 'si' o 'no'");
 ingSi_O_No = ingSi_O_No.toLowerCase();
 while (ingSi_O_No != "si" && ingSi_O_No != "no") {
     ingSi_O_No = prompt("Ingrese si es : 'si' o 'no'")
@@ -40,13 +40,13 @@ while (isNaN(ingLegajo) || ingLegajo < 1 || ingLegajo > 10000) {
 //VALIDACIÓN EDAD 1 A 130
 ingEdad = parseInt(prompt("Ingrese su edad: (1 a 130)"))
 while (isNaN(ingEdad) || ingEdad < 1 || ingEdad > 130) {
-    ingEdad = parseInt(prompt("Error. Ingrese una edad válida: (1 a 130)"));
+    ingEdad = parseInt(prompt("Error. Ingrese su edad: (1 a 130)"));
 }
 
 //VALIDACIÓN EDAD MAYOR A 18
 ingEdad = parseInt(prompt("Ingrese su edad: (18 a 130)"))
 while (isNaN(ingEdad) || ingEdad < 18 || ingEdad > 130) {
-    ingEdad = parseInt(prompt("Error. Ingrese una edad válida: (18 o más)"));
+    ingEdad = parseInt(prompt("Error. Ingrese su edad: (18 a 130)"));
 }
 
 //VALIDACION NOTA
@@ -132,24 +132,24 @@ while (isNaN(ingImporte) || ingImporte < 0 || ingImporte > 300000) {
 }
 
 //VALIDACIÓN POR TIPO DE PRODUCTO
-ingTipoProducto = prompt("ingrese el tipo de producto: 'x1', 'x2' o 'x3'");
+ingTipoProducto = prompt("Ingrese el tipo de producto: 'x1', 'x2' o 'x3'");
 ingTipoProducto = ingTipoProducto.toLowerCase();
 while (ingTipoProducto != "x1" && ingTipoProducto != "x2" && ingTipoProducto != "x3") {
-    ingTipoProducto = prompt("Ingrese el tipo de producto: 'x1', 'x2' o 'x3'")
+    ingTipoProducto = prompt("Error. Ingrese el tipo de producto: 'x1', 'x2' o 'x3'")
 }
 
 //VALIDACION TIPO DE VENTA
-ingTipoVenta = prompt("ingrese el tipo de venta: 'online' o 'local'");
+ingTipoVenta = prompt("Ingrese el tipo de venta: 'online' o 'local'");
 ingTipoVenta = ingTipoVenta.toLowerCase();
 while (ingTipoVenta != "online" && ingTipoVenta != "local") {
-    ingTipoVenta = prompt("Ingrese el tipo de venta: 'online' o 'local'")
+    ingTipoVenta = prompt("Error. Ingrese el tipo de venta: 'online' o 'local'")
 }
 
 //VALIDACION DIVISIONES CON TOUPPERCASE
-ingDivision = prompt("ingrese su división: 'A', 'B' o 'C'");
+ingDivision = prompt("Ingrese su división: 'A', 'B' o 'C'");
 ingDivision = ingDivision.toUpperCase();
 while (ingDivision != "A" && ingDivision != "B" && ingDivision != "C") {
-    ingDivision = prompt("Ingrese su división: 'A', 'B' o 'C'")
+    ingDivision = prompt("Error. Ingrese su división: 'A', 'B' o 'C'")
 }
 
 //ESTRUCTURA SWITCH 3 CASOS
@@ -170,7 +170,7 @@ let continuar = true;
 
 while (continuar == true) {
 
-    continuar = confirm("¿Desea seguir ingresando datos?")
+    continuar = confirm("¿Desea seguir ingresando datos?");
 }
 
 //ESTRUCTURA FOR - ITERACIONES DEFINIDAS
@@ -210,7 +210,7 @@ if (contador == 0 || ing < min) {
 
 if (x1 > x2 && x1 > x3) {
     maxNum = "x1";
-} else if (x2 > x1 && x2 > x3) {
+} else if (x2 > x3) {
     maxNum = "x2";
 } else {
     maxNum = "x3";
