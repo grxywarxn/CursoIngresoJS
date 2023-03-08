@@ -25,7 +25,6 @@ function mostrar() {
 
 	let contadorTemperaturasPares = 0;
 	let contadorTemperaturasImparesEuropa = 0;
-	let banderaPaísMenosHabitantes;
 	let minHabitantes;
 	let nombrePaísMinHabitantes;
 	let contadorPaísesMasDe40 = 0;
@@ -170,7 +169,7 @@ function mostrar() {
 		console.log("No se registraron paises Americanos que tengan menos de 0 grados");
 	}	
 	//f)el promedio de habitantes entre los paises ingresados.
-	console.log("El promedio de habitantes entre todos los países ingresados es: " + promedioCantidadHabitantesTotal);
+	console.log("El promedio de habitantes entre todos los países ingresados (expresado en millones) es: " + promedioCantidadHabitantesTotal);
 	//g)el promedio de habitantes entre los paises que superan los 40 grados
 	if (contadorPaísesMasDe40 > 0) {
 		console.log("El promedio de habitantes entre los paises que superan los 40 grados es: " + promedioHabitantesPaísesMasDe40);
