@@ -199,6 +199,9 @@ function mostrar() {
 		console.log("No se registraron ingresos de otro tipo de animal");
 	}
 	//b) mostrar que raza de gatos tiene mas animales y el promedio de edad de esta raza
-	console.log("La raza de gatos con más cantidad de ingresos es: " + razaGatosConMasCantidad + " y el promedio de edad de esa raza es: " + maxEdadPromedio);
-
+	if (contadorGatos > 0) {
+		console.log("La raza de gatos con más cantidad de ingresos es: " + razaGatosConMasCantidad + " y el promedio de edad de esa raza es: " + maxEdadPromedio);
+	} else {
+		console.log("No se registraron ingresos de gatos");
+	}
 }
