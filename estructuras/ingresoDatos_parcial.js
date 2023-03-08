@@ -8,22 +8,22 @@ while (continuar == true) {
     }
     ingEdad = parseInt(prompt("Ingrese su edad (18 o más)"))
     while (isNaN(ingEdad) || ingEdad < 18 || ingEdad > 130) {
-        ingEdad = parseInt(prompt("Error: ingrese una edad válida (18 o más)"));
+        ingEdad = parseInt(prompt("Error. Ingrese su edad (18 o más)"));
     }
     ingSexo = prompt("Ingrese su sexo: masculino, femenino o no binario")
     ingSexo = ingSexo.toLowerCase();
     while (ingSexo != "masculino" && ingSexo != "femenino" && ingSexo != "no binario") {
         ingSexo = prompt("Error. Ingrese su sexo: masculino, femenino o no binario");
     }
-    ingLenguaje = prompt("ingrese el lenguaje: 'python', 'c#' o 'javascript'");
+    ingLenguaje = prompt("Ingrese el lenguaje: 'python', 'c#' o 'javascript'");
     ingLenguaje = ingLenguaje.toLowerCase();
     while (ingLenguaje != "python" && ingLenguaje != "c#" && ingLenguaje != "javascript") {
-        ingLenguaje = prompt("Ingrese el lenguaje: 'python', 'c#' o 'javascript'")
+        ingLenguaje = prompt("Error. Ingrese el lenguaje: 'python', 'c#' o 'javascript'")
     }
-    ingLugarAprendizaje = prompt("ingrese dónde aprendió a programar: 'universidad', 'terciario' o 'curso'");
+    ingLugarAprendizaje = prompt("Ingrese dónde aprendió a programar: 'universidad', 'terciario' o 'curso'");
     ingLugarAprendizaje = ingLugarAprendizaje.toLowerCase();
     while (ingLugarAprendizaje != "universidad" && ingLugarAprendizaje != "terciario" && ingLugarAprendizaje != "curso") {
-        ingLugarAprendizaje = prompt("Ingrese dónde aprendió a programar: 'universidad', 'terciario' o 'curso'")
+        ingLugarAprendizaje = prompt("Error. Ingrese dónde aprendió a programar: 'universidad', 'terciario' o 'curso'")
     }
     continuar = confirm("¿Desea seguir ingresando datos?")
 }
@@ -36,22 +36,22 @@ while (continuar == true) {
     while (!isNaN(ingNombre)) {
         ingNombre = prompt("Error. Ingrese su nombre: ");
     }
-    ingLugar = prompt("ingrese la ubicación del inmueble: 'caba', 'conurbano' o 'interior'");
+    ingLugar = prompt("Ingrese la ubicación del inmueble: 'caba', 'conurbano' o 'interior'");
     ingLugar = ingLugar.toLowerCase();
     while (ingLugar != "caba" && ingLugar != "conurbano" && ingLugar != "interior") {
-        ingLugar = prompt("Ingrese la ubicación del inmueble: 'caba', 'conurbano' o 'interior'")
+        ingLugar = prompt("Error. Ingrese la ubicación del inmueble: 'caba', 'conurbano' o 'interior'")
     }
     if (ingLugar == "caba") {
-        ingTipoInmueble = prompt("ingrese el tipo de inmueble: 'departamento'o 'casa'");
+        ingTipoInmueble = prompt("Ingrese el tipo de inmueble: 'departamento'o 'casa'");
         ingTipoInmueble = ingTipoInmueble.toLowerCase();
         while (ingTipoInmueble != "departamento" && ingTipoInmueble != "casa") {
-            ingTipoInmueble = prompt("Ingrese el tipo de inmueble: 'departamento'o 'casa'")
+            ingTipoInmueble = prompt("Error. Ingrese el tipo de inmueble: 'departamento'o 'casa'")
         }
     } else {
-        ingTipoInmueble = prompt("ingrese el tipo de inmueble: 'departamento', 'casa' o 'quinta'");
+        ingTipoInmueble = prompt("Ingrese el tipo de inmueble: 'departamento', 'casa' o 'quinta'");
         ingTipoInmueble = ingTipoInmueble.toLowerCase();
         while (ingTipoInmueble != "departamento" && ingTipoInmueble != "casa" && ingTipoInmueble != "quinta") {
-            ingTipoInmueble = prompt("Ingrese el tipo de inmueble: 'departamento', 'casa' o 'quinta'")
+            ingTipoInmueble = prompt("Error. Ingrese el tipo de inmueble: 'departamento', 'casa' o 'quinta'")
         }
     }
     switch (ingTipoInmueble) {
@@ -107,10 +107,10 @@ while (continuar == true) {
     while (!isNaN(ingNombreRecital)) {
         ingNombreRecital = prompt("Error. Ingrese el nombre del recital: ");
     }
-    ingTipoRecital = prompt("ingrese el tipo de recital: 'pop', 'rock' o 'regeton'");
+    ingTipoRecital = prompt("Ingrese el tipo de recital: 'pop', 'rock' o 'regeton'");
     ingTipoRecital = ingTipoRecital.toLowerCase();
     while (ingTipoRecital != "pop" && ingTipoRecital != "rock" && ingTipoRecital != "regeton") {
-        ingTipoRecital = prompt("Ingrese el tipo de recital: 'pop', 'rock' o 'regeton'")
+        ingTipoRecital = prompt("Error. Ingrese el tipo de recital: 'pop', 'rock' o 'regeton'")
     }
     ingCantidadEntradas = parseInt(prompt("Ingrese la cantidad de entradas: "));
     while (isNaN(ingCantidadEntradas) || ingCantidadEntradas < 1 || ingCantidadEntradas > 20) {
@@ -120,10 +120,10 @@ while (continuar == true) {
     while (isNaN(ingPrecioUnitarioEntrada) || ingPrecioUnitarioEntrada < 1 || ingPrecioUnitarioEntrada > 300000) {
         ingPrecioUnitarioEntrada = parseInt(prompt("Error. Ingrese el precio de cada entrada: "));
     }
-    ingLugarConcierto = prompt("ingrese el lugar del concierto: 'rex', 'luna park' o 'trastienda'");
+    ingLugarConcierto = prompt("Ingrese el lugar del concierto: 'rex', 'luna park' o 'trastienda'");
     ingLugarConcierto = ingLugarConcierto.toLowerCase();
     while (ingLugarConcierto != "rex" && ingLugarConcierto != "luna park" && ingLugarConcierto != "trastienda") {
-        ingLugarConcierto = prompt("Ingrese el lugar del concierto: 'rex', 'luna park' o 'trastienda'")
+        ingLugarConcierto = prompt("Error. Ingrese el lugar del concierto: 'rex', 'luna park' o 'trastienda'")
     }
 
     continuar = confirm("¿Desea seguir ingresando datos?")
