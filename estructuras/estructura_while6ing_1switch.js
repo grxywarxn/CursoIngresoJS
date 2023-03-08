@@ -5,8 +5,8 @@ while (continuar == true) {
         ingNombre = prompt("Error. Ingrese su nombre: ");
     }
     ingEdad = parseInt(prompt("Ingrese su edad (18 o más)"))
-    while (isNaN(ingEdad) || ingEdad < 0 || ingEdad > 130) {
-        ingEdad = parseInt(prompt("Error: ingrese una edad válida (18 o más)"));
+    while (isNaN(ingEdad) || ingEdad < 18 || ingEdad > 130) {
+        ingEdad = parseInt(prompt("Error. Ingrese su edad (18 o más)"));
     }
     ingSexo = prompt("Ingrese su sexo: masculino, femenino o no binario")
     ingSexo = ingSexo.toLowerCase();
@@ -41,9 +41,8 @@ if (true) {
     console.log("No se registraron ");
 }
 
-console.log("" + nombre);
-console.log("" + nombre);
-
+console.log("" + x);
+console.log("" + x);
 
 if (true) {
     console.log("" + nombre + " y su edad es: " + edad);
