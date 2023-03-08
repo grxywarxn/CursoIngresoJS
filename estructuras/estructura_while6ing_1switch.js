@@ -14,10 +14,10 @@ while (continuar == true) {
         ingSexo = prompt("Error. Ingrese su sexo: masculino, femenino o no binario");
     }
     //usar para el switch
-    x = prompt("ingrese su x: 'x1', 'x2' o 'x3'");
+    x = prompt("Ingrese su x: 'x1', 'x2' o 'x3'");
     x = x.toLowerCase();
     while (x != "x1" && x != "x2" && x != "x3") {
-        x = prompt("Ingrese su x: 'x1', 'x2' o 'x3'")
+        x = prompt("Error. Ingrese su x: 'x1', 'x2' o 'x3'")
     }
 
 
